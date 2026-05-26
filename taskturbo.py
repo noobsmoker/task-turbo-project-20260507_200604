@@ -18,6 +18,7 @@ def save_tasks(tasks):
         json.dump(tasks, f, indent=2)
 
 def main():
+    try:
     parser = argparse.ArgumentParser(description='Task Turbo')
     parser.add_argument('command', choices=['add', 'list', 'done', 'remove'])
     parser.add_argument('task', nargs='?')
